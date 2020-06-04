@@ -125,7 +125,7 @@ namespace Bankrekening
 
         private void txtFilter_TextChanged(object sender, TextChangedEventArgs e)
         {
-            List<Rekeningen> FilteredRekeningen = (from Rekeningen in db.Rekeningens where Rekeningen.Klanten.Voornaam.Contains(txtFilter.Text) select Rekeningen).ToList();
+            List<Rekeningen> FilteredRekeningen = (from Rekeningen in db.Rekeningens where Rekeningen.Klanten.Voornaam.Contains(txtFilter.Text) || Rekeningen.Klanten.Achternaam.Contains(txtFilter.Text) select Rekeningen).ToList();
             dgRekeningen.ItemsSource = FilteredRekeningen;
         }
 
@@ -144,9 +144,6 @@ namespace Bankrekening
                 {
                     txtIBAN.IsReadOnly = true;
                     txtIBAN.Text = SelectedItem.IBAN;
-                    //cbKlanten.ItemsSource = KC.AllKlanten();
-                    //cbKlanten.DisplayMemberPath = "Voornaam";
-                    //cbKlanten.SelectedItem = SelectedItem.Klanten;
                     int i = 0;
                     foreach (String BSN in BSNs)
                     {

@@ -85,7 +85,7 @@ namespace Bankrekening
 
         private void txtFilter_TextChanged(object sender, TextChangedEventArgs e)
         {
-            List<Klanten> FilteredKlanten = (from Klanten in db.Klantens where Klanten.Voornaam.Contains(txtFilter.Text) select Klanten).ToList();
+            List<Klanten> FilteredKlanten = (from Klanten in db.Klantens where Klanten.Voornaam.Contains(txtFilter.Text) || Klanten.Achternaam.Contains(txtFilter.Text) select Klanten).ToList();
             dgKlanten.ItemsSource = FilteredKlanten;
         }
 
