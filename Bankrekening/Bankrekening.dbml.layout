@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Bankrekening">
+  <DataContextMoniker Name="/BankrekeningDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d4c4698c-f653-417b-a972-bfaf10fbda42" absoluteBounds="0.75, 1.125, 2, 1.5785953776041664">
+      <DataClassMoniker Name="/BankrekeningDataContext/Typen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="22468102-1a35-45ca-9141-25d1025951a3" absoluteBounds="0.765, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ab768c00-3d25-4233-8212-39f5e0ecbba0" absoluteBounds="0.75, 5.25, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/BankrekeningDataContext/Klanten" />
+      <nestedChildShapes>
+        <elementListCompartment Id="755e02da-3d51-4216-8b9f-abb009978a37" absoluteBounds="0.765, 5.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5edf7d42-bfbc-42b4-a145-0e21f78a98b3" absoluteBounds="3.5, 0.875, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/BankrekeningDataContext/Rekeningen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4305d8c-9e95-4bd3-840d-49c9f85450fd" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.52005126953125); (4.5 : 6.52005126953125); (4.5 : 2.8381982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BankrekeningDataContext/Klanten/Klanten_Rekeningen" />
+      <nodes>
+        <classShapeMoniker Id="ab768c00-3d25-4233-8212-39f5e0ecbba0" />
+        <classShapeMoniker Id="5edf7d42-bfbc-42b4-a145-0e21f78a98b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.91429768880208); (3.5 : 1.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BankrekeningDataContext/Typen/Typen_Rekeningen" />
+      <nodes>
+        <classShapeMoniker Id="d4c4698c-f653-417b-a972-bfaf10fbda42" />
+        <classShapeMoniker Id="5edf7d42-bfbc-42b4-a145-0e21f78a98b3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Bankrekening.UCKlanten"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Bankrekening"
+             mc:Ignorable="d" 
+             d:DesignHeight="399" d:DesignWidth="677">
+    <Grid>
+        <Label Content="BSN:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Voorletters:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+        <Label Content="Voornaam:" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="Achternaam:" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top"/>
+        <Label Content="Adres:" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top"/>
+        <Label Content="Postcode:" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top"/>
+        <Label Content="Telefoonnummer:" HorizontalAlignment="Left" Margin="10,192,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="10,215,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBSN" Width="120" VerticalAlignment="Top" TextWrapping="Wrap" Margin="117,10,0,0" Height="23" HorizontalAlignment="Left" Foreground="White" Background="Transparent"/>
+        <TextBox x:Name="txtVoorletters" Width="120" VerticalAlignment="Top" TextWrapping="Wrap" Margin="117,36,0,0" Height="23" HorizontalAlignment="Left" Foreground="White" Background="Transparent"/>
+        <TextBox x:Name="txtVoornaam" Width="120" VerticalAlignment="Top" TextWrapping="Wrap" Margin="117,62,0,0" Height="23" HorizontalAlignment="Left" Foreground="White" Background="Transparent"/>
+        <TextBox x:Name="txtAchternaam" Width="120" VerticalAlignment="Top" TextWrapping="Wrap" Margin="117,88,0,0" Height="23" HorizontalAlignment="Left" Foreground="White" Background="Transparent"/>
+        <TextBox x:Name="txtAdres" Width="120" VerticalAlignment="Top" TextWrapping="Wrap" Margin="117,114,0,0" Height="23" HorizontalAlignment="Left" Foreground="White" Background="Transparent"/>
+        <TextBox x:Name="txtPostcode" Width="120" VerticalAlignment="Top" TextWrapping="Wrap" Margin="117,140,0,0" Height="23" HorizontalAlignment="Left" Foreground="White" Background="Transparent"/>
+        <TextBox x:Name="txtTelefoonnummer" Width="120" VerticalAlignment="Top" TextWrapping="Wrap" Margin="117,192,0,0" Height="23" HorizontalAlignment="Left" Foreground="White" Background="Transparent"/>
+        <TextBox x:Name="txtEmail" Width="120" VerticalAlignment="Top" TextWrapping="Wrap" Margin="117,218,0,0" Height="23" HorizontalAlignment="Left" Foreground="White" Background="Transparent"/>
+        <DataGrid x:Name="dgKlanten" HorizontalAlignment="Left" Height="379" Margin="242,10,0,0" VerticalAlignment="Top" Width="425" AutoGenerateColumns="False" IsReadOnly="True" MouseDoubleClick="dgKlanten_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding BSN}" ClipboardContentBinding="{x:Null}" Header="BSN"/>
+                <DataGridTextColumn Binding="{Binding Voorletters}" ClipboardContentBinding="{x:Null}" Header="Voorletters"/>
+                <DataGridTextColumn Binding="{Binding Voornaam}" ClipboardContentBinding="{x:Null}" Header="Voornaam"/>
+                <DataGridTextColumn Binding="{Binding Achternaam}" ClipboardContentBinding="{x:Null}" Header="Achternaam"/>
+                <DataGridTextColumn Binding="{Binding Adres}" ClipboardContentBinding="{x:Null}" Header="Adres"/>
+                <DataGridTextColumn Binding="{Binding Postcode}" ClipboardContentBinding="{x:Null}" Header="Postcode"/>
+                <DataGridTextColumn Binding="{Binding Woonplaats}" ClipboardContentBinding="{x:Null}" Header="Woonplaats"/>
+                <DataGridTextColumn Binding="{Binding Telefoonnummer}" ClipboardContentBinding="{x:Null}" Header="Telefoonnummer"/>
+                <DataGridTextColumn Binding="{Binding Email}" ClipboardContentBinding="{x:Null}" Header="Email"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnSave" Content="Save" Background="{x:Null}" BorderBrush="#FFABADB3" Click="btnSave_Click" Margin="117,246,440,133" Foreground="White" Height="20" Width="120"/>
+        <TextBox x:Name="txtWoonplaats" Width="120" VerticalAlignment="Top" TextWrapping="Wrap" Margin="117,166,0,0" Height="23" HorizontalAlignment="Left" Foreground="White" Background="Transparent"/>
+        <Label Content="Woonplaats:" HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top"/>
+        <Label Content="Filter:" HorizontalAlignment="Left" Margin="10,363,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFilter" Width="120" VerticalAlignment="Top" TextWrapping="Wrap" Margin="117,363,0,0" Height="23" HorizontalAlignment="Left" Foreground="White" Background="Transparent" TextChanged="txtFilter_TextChanged"/>
+        <Button x:Name="btnEdit" Content="Edit" Background="{x:Null}" BorderBrush="#FFABADB3" Click="btnEdit_Click" Margin="117,246,440,133" Foreground="White" Height="20" Width="120" Visibility="Hidden"/>
+        <Button x:Name="btnDelete" Content="Delete" Background="{x:Null}" BorderBrush="#FFABADB3" Click="btnDelete_Click" Margin="117,271,440,108" Foreground="White" Height="20" Width="120" Visibility="Hidden"/>
+
+    </Grid>
+</UserControl>

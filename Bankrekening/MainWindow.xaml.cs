@@ -20,9 +20,35 @@ namespace Bankrekening
     /// </summary>
     public partial class MainWindow : Window
     {
+        BankrekeningDataContext db = new BankrekeningDataContext();
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void AddCanvas(UserControl UC)
+        {
+            canvas.Children.Clear();
+            canvas.Children.Add(UC);
+        }
+
+        private void btnRekeningen_Click(object sender, RoutedEventArgs e)
+        {
+            UCRekening UCR = new UCRekening(db);
+            AddCanvas(UCR);
+        }
+
+        private void btnKlanten_Click(object sender, RoutedEventArgs e)
+        {
+            UCKlanten UCK = new UCKlanten(db);
+            AddCanvas(UCK);
+        }
+
+        private void btnTypes_Click(object sender, RoutedEventArgs e)
+        {
+            UCTypes UCT = new UCTypes(db);
+            AddCanvas(UCT);
         }
     }
 }
